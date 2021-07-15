@@ -204,12 +204,12 @@ const (
 )
 
 type Config struct {
-	SpanExporterEndpoint           string            `env:"OTEL_EXPORTER_OTLP_SPAN_ENDPOINT,default=ingest.lightstep.com:443"`
+	SpanExporterEndpoint           string            `env:"OTEL_EXPORTER_OTLP_SPAN_ENDPOINT,default=localhost"`
 	SpanExporterEndpointInsecure   bool              `env:"OTEL_EXPORTER_OTLP_SPAN_INSECURE,default=false"`
 	ServiceName                    string            `env:"LS_SERVICE_NAME"`
 	ServiceVersion                 string            `env:"LS_SERVICE_VERSION,default=unknown"`
 	Headers                        map[string]string `env:"OTEL_EXPORTER_OTLP_HEADERS"`
-	MetricExporterEndpoint         string            `env:"OTEL_EXPORTER_OTLP_METRIC_ENDPOINT,default=ingest.lightstep.com:443"`
+	MetricExporterEndpoint         string            `env:"OTEL_EXPORTER_OTLP_METRIC_ENDPOINT,default=localhost"`
 	MetricExporterEndpointInsecure bool              `env:"OTEL_EXPORTER_OTLP_METRIC_INSECURE,default=false"`
 	MetricsEnabled                 bool              `env:"LS_METRICS_ENABLED,default=true"`
 	AccessToken                    string            `env:"LS_ACCESS_TOKEN"`
