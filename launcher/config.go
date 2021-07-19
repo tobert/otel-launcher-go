@@ -223,6 +223,7 @@ type Config struct {
 }
 
 func checkEndpointDefault(value, defValue string) error {
+	/* this breaks generic usage, so commenting out for now
 	if value == "" {
 		// The endpoint is disabled.
 		return nil
@@ -230,6 +231,7 @@ func checkEndpointDefault(value, defValue string) error {
 	if value == defValue {
 		return fmt.Errorf("invalid configuration: access token missing, must be set when reporting to %s. Set LS_ACCESS_TOKEN env var or configure WithAccessToken in code", value)
 	}
+	*/
 	return nil
 }
 
